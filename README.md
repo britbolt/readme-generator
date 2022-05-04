@@ -1,7 +1,1 @@
-<<<<<<< HEAD
-# Professional README Generator Starter Code
-
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
-=======
 # readme-generator
->>>>>>> a116cfb0dc3ac1372ffaf7e558846514ae04b5c0
