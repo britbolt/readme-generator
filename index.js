@@ -29,7 +29,7 @@ const promptQuestions = userData => {
     {
         type: 'input',
         name: 'description',
-        message: 'Please describe your project.(Required)',
+        message: 'Please describe your project. (Required)',
         validate: descriptionInput => {
             if (descriptionInput)
             {
@@ -41,15 +41,47 @@ const promptQuestions = userData => {
         }
     },
     {
-        type: 'checkbox',
-        name: 'language',
-        message: 'Which languages did you use for this project? (check all that apply)',
-        choices: ['HTML', 'CSS', 'Javascript', 'Python', 'Java', 'C++', 'SQL']
+        type: 'input',
+        name: 'installation',
+        message: 'What as your installation process? (Required)',
+    },
+    {
+        type: 'input',
+        name: 'contributing',
+        message: 'Who contributed to this project. (Required)',
+        validate: contributingInput => {
+            if (contributingInput)
+            {
+                return true;
+            } else {
+                console.log('You must enter contributors.');
+                return false;
+            }        
+        }
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Which tests did you use, if any?',
     },
     {
         type: 'input',
         name: 'usage',
         message: 'What is the intended use for this project?',
+    },
+    {
+        type: 'list',
+        name: 'license',
+        message: 'Which license(s) cover this project?',
+        choices: [
+            "Apache",
+            "GNU",
+            "ISC",
+            "MIT",
+            "Mozilla",
+            "Open",
+            "Academic"
+        ]
     },
     {
             type: 'input',
@@ -61,6 +93,19 @@ const promptQuestions = userData => {
                 } else {
                     console.log('Please enter your github username.');
                     return false;
+        }
+    }
+},
+{
+    type: 'input',
+    name: 'email',
+    message: 'What is your email address? (Required)',
+    validate: emailInput => {
+        if(emailInput) {
+            return true;
+        } else {
+            console.log('Please enter your email address.');
+            return false;
         }
     }
 }
