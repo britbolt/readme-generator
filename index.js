@@ -83,7 +83,7 @@ const promptQuestions = userData => {
             "Academic"
         ]
     },
-    {
+   {
             type: 'input',
             name: 'github',
             message: 'What is your Github username? (Required)',

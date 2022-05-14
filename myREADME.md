@@ -1,7 +1,7 @@
 
- <h1> #redme generator </h1>
+ <h1>brit readme maker </h1>
  
- https://img.shields.io/badge/license-ISC-brightgreen
+![badge](https://img.shields.io/badge/license-MIT-brightgreen)
  
   ## Table of Contents
   - [Description](#Description) 
@@ -13,23 +13,22 @@
   - [Questions](#Questions)
 
   ## Description
-  this project is to generate a readme
+  makes readmes
   
-  ## Installation:
-  node and fs
+  ## Installation
+  inquirer and fs
 
   ## Usage
-  to help users generate readmes
+  make readme files for user
 
   ## License
-  ISC
-  This application is covered by the ISC license.
+  This application is covered by the MIT license.
 
   ## Contributing
   brittany
 
   ## Tests
-  none
+  no test
 
   ## Questions
   undefined
@@ -37,5 +36,5 @@
 
   Find me on Github: [brithub](https://github.com/brithub)
 
-  Email me with questions: brit@email.com
+  Email me with questions: brit@gmail.com
 
