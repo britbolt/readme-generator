@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generatePage = require('./Develop/utils/generateMarkdown');
+const generateMarkdown = require('./Develop/utils/generateMarkdown');
+
 
 
 // TODO: Create an array of questions for user input
@@ -13,10 +14,10 @@ const promptQuestions = userData => {
     
     {
         type: 'input',
-        name: 'project-title',
+        name: 'title',
         message: 'What is the title of your project? (Required)',
-        validate: projectTitle => {
-            if (projectTitle) {
+        validate: titleInput => {
+            if (titleInput) {
             return true;
         }
         else {
@@ -63,21 +64,18 @@ const promptQuestions = userData => {
         }
     }
 }
-])
+])  
 .then(userData => {
-    const data = generatePage(userData);
+    console.log(userData);
+     
+    
+const generateReadme = generateMarkdown(userData);
 
-    // fs.writeFile('./README.md', data, err => {
-    //     if (err) throw new Error (err);
-    //         console.log("File created successfully");
-    // }) 
+    fs.writeFile('./myREADME.md', generateReadme, 'utf8', err => {
+        if(err) throw err;
+        console.log('The file has been created!');
+    });
 });
 };
 
-
-
-const startPage = function () {
-    promptQuestions();
-};
-// Function call to initialize app
-startPage();
+promptQuestions();
