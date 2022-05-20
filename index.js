@@ -43,7 +43,7 @@ const promptQuestions = userData => {
     {
         type: 'input',
         name: 'installation',
-        message: 'What as your installation process? (Required)',
+        message: 'What was your installation process? (Required)',
     },
     {
         type: 'input',
